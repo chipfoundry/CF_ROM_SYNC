@@ -1,0 +1,24 @@
+info:
+  name: CF_ROM_SYNC
+  description: Synchronous ROM (CF_ROM_SYNC) is a ChipFoundry
+    hard-macro blackbox on SkyWater 130 nm.
+  repo: https://github.com/chipfoundry/CF_ROM_SYNC
+  owner: ChipFoundry
+  license: proprietary
+  author: ChipFoundry
+  email: support@chipfoundry.io
+  version: 0.2.0
+  date: 9-6-2026
+  category: digital
+  tags:
+  - CF_ROM_SYNC
+  bus: n/a
+  type: hard
+  maturity: Production
+  width: '160.18'
+  height: '90.42'
+  technology: sky130
+  digital_supply_voltage: n/a
+  analog_supply_voltage: n/a
+  clock_freq_mhz: n/a
+  cell_count: '2'

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="506" height="250" viewBox="0 0 506 250">
+<rect width="100%" height="100%" fill="white"/>
+<text x="253" y="22" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#111">CF_ROM_SYNC</text>
+<rect x="148" y="48" width="210" height="130" fill="#f7f7f7" stroke="#222" stroke-width="1.5"/>
+<text x="253" y="118" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#333">CF_ROM_SYNC</text>
+<line x1="148" y1="69" x2="130" y2="69" stroke="#222" stroke-width="1.25"/>
+<text x="124" y="73" text-anchor="end" font-family="Menlo, Consolas, monospace" font-size="11" fill="#111">A[9:0]</text>
+<line x1="148" y1="91" x2="130" y2="91" stroke="#222" stroke-width="1.25"/>
+<text x="124" y="95" text-anchor="end" font-family="Menlo, Consolas, monospace" font-size="11" fill="#111">EN</text>
+<line x1="148" y1="113" x2="130" y2="113" stroke="#222" stroke-width="1.25"/>
+<text x="124" y="117" text-anchor="end" font-family="Menlo, Consolas, monospace" font-size="11" fill="#111">CLK</text>
+<line x1="148" y1="135" x2="130" y2="135" stroke="#222" stroke-width="1.25"/>
+<text x="124" y="139" text-anchor="end" font-family="Menlo, Consolas, monospace" font-size="11" fill="#111">RST</text>
+<line x1="148" y1="157" x2="130" y2="157" stroke="#222" stroke-width="1.25"/>
+<text x="124" y="161" text-anchor="end" font-family="Menlo, Consolas, monospace" font-size="11" fill="#111">OE</text>
+<line x1="358" y1="113" x2="376" y2="113" stroke="#222" stroke-width="1.25"/>
+<text x="382" y="117" text-anchor="start" font-family="Menlo, Consolas, monospace" font-size="11" fill="#111">DO[7:0]</text>
+<line x1="160" y1="178" x2="160" y2="192" stroke="#222" stroke-width="1.25"/>
+<text x="160" y="206" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="10" fill="#111">vpwr</text>
+<line x1="346" y1="178" x2="346" y2="192" stroke="#222" stroke-width="1.25"/>
+<text x="346" y="206" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="10" fill="#111">vgnd</text>
+</svg>

@@ -1,0 +1,88 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 0
+<< metal1 >>
+rect 23736 15 23775 51
+rect 23543 15 23582 51
+rect 19346 15 19385 51
+rect 19153 15 19192 51
+rect 14956 15 14995 51
+rect 10566 15 10605 51
+rect 14763 15 14802 51
+rect 3280 9 3319 45
+rect 8046 9 8085 45
+rect 7507 9 7546 45
+rect 6217 9 6256 45
+rect 10373 15 10412 51
+<< metal2 >>
+rect 28 2181 54 2207
+rect 28 2461 54 2487
+rect 29 292 55 318
+rect 30 1060 56 1086
+rect 28 6793 54 6819
+rect 28 6513 54 6539
+rect 24837 82 25602 345
+rect 25043 11793 25808 12056
+rect 4585 11800 5652 12046
+rect 122 11764 1060 12050
+rect 28 11575 54 11601
+rect 28 11297 54 11323
+rect 28 7241 54 7267
+rect 28 6961 54 6987
+<< labels >>
+rlabel metal1 s 23736 15 23775 51 4 DO[0]
+port 1 nsew
+rlabel metal1 s 23543 15 23582 51 4 DO[1]
+port 2 nsew
+rlabel metal1 s 19346 15 19385 51 4 DO[2]
+port 3 nsew
+rlabel metal1 s 19153 15 19192 51 4 DO[3]
+port 4 nsew
+rlabel metal1 s 14956 15 14995 51 4 DO[4]
+port 5 nsew
+rlabel metal1 s 10566 15 10605 51 4 DO[6]
+port 6 nsew
+rlabel metal2 s 28 2181 54 2207 4 A[2]
+port 7 nsew
+rlabel metal2 s 28 2461 54 2487 4 A[1]
+port 8 nsew
+rlabel metal2 s 29 292 55 318 4 A[0]
+port 9 nsew
+rlabel metal2 s 30 1060 56 1086 4 A[3]
+port 10 nsew
+rlabel metal2 s 28 6793 54 6819 4 A[9]
+port 11 nsew
+rlabel metal2 s 28 6513 54 6539 4 A[8]
+port 12 nsew
+rlabel metal1 s 14763 15 14802 51 4 DO[5]
+port 13 nsew
+rlabel metal2 s 24837 82 25602 345 4 vpwr
+port 14 nsew
+rlabel metal2 s 25043 11793 25808 12056 4 vgnd
+port 15 nsew
+rlabel metal2 s 4585 11800 5652 12046 4 vnb
+port 16 nsew
+rlabel metal2 s 122 11764 1060 12050 4 vpb
+port 17 nsew
+rlabel metal1 s 3280 9 3319 45 4 OE
+port 18 nsew
+rlabel metal1 s 8046 9 8085 45 4 EN
+port 19 nsew
+rlabel metal1 s 7507 9 7546 45 4 CLK
+port 20 nsew
+rlabel metal1 s 6217 9 6256 45 4 RST
+port 21 nsew
+rlabel metal1 s 10373 15 10412 51 4 DO[7]
+port 22 nsew
+rlabel metal2 s 28 11575 54 11601 4 A[5]
+port 23 nsew
+rlabel metal2 s 28 11297 54 11323 4 A[4]
+port 24 nsew
+rlabel metal2 s 28 7241 54 7267 4 A[6]
+port 25 nsew
+rlabel metal2 s 28 6961 54 6987 4 A[7]
+port 26 nsew
+<< properties >>
+string FIXED_BBOX 0 0 26036 12084
+<< end >>

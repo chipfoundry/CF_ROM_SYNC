@@ -1,66 +1,90 @@
 # CF_ROM_SYNC
 
+> Synchronous ROM
+
+Draft for designer review. The public GDS is an abstract; ChipFoundry
+substitutes protected full geometry at tapeout.
+
+This package ships an SRAM-style PG wrap `CF_ROM_SYNC` around leaf
+`CF_ROM_SYNC_core`.
+
 ## Overview
 
-CF_ROM_SYNC is the ChipFoundry catalog name for a synchronous ROM hard-macro family
-on SkyWater 130 nm. The catalog lists 4K, 8K, and 32K configurations. This repository
-holds the **public** customer views only: abstract layout, a blackbox Verilog stub for
-top-level integration, Liberty timing when present, and a Verilog behavioral model for
-functional verification when present.
+`CF_ROM_SYNC` is a SkyWater 130 nm hard-macro synchronous ROM for boot
+images, coefficient tables, and fixed firmware. This drop is the 1K×8
+macro (10-bit address, 8-bit data). Instantiate `CF_ROM_SYNC`.
 
-Full layout, schematics, and transistor-level netlists are not part of the license
-grant. ChipFoundry merges the vault GDS at tapeout. Spice simulation models are not
-delivered to customers.
+Macro size is 160.18 × 90.42 µm (15 µm halo around leaf 130.18 × 60.42 µm).
+Customer PG for chip PDN is `vpwr` / `vgnd`. Well taps `vpb` / `vnb` are
+tied inside the wrap.
 
 ## Installation
 
-Install through IPM after a GitHub release exists:
-
-```
+```bash
 pip install cf-ipm
-ipm install CF_ROM_SYNC
+ipm install CF_ROM_SYNC --version 0.2.0 --include-drafts
 ```
 
-In the digital flow, treat the stub as a blackbox (`VERILOG_FILES_BLACKBOX`) and add
-the public LEF and abstract GDS as extra views (`EXTRA_LEFS`, `EXTRA_GDS`). Use the
-behavioral Verilog under `verify/beh_model/` for functional simulation, not the stub
-and not spice.
+Until the marketplace listing is published, install from a local catalog
+override:
 
-Until a release URL is published, this section documents the intended customer path.
+```bash
+ipm install CF_ROM_SYNC --version 0.2.0 --include-drafts --local-file ip/catalog.json
+```
+
+Use `hdl/gl/CF_ROM_SYNC.v` as the customer blackbox, `layout/lef/CF_ROM_SYNC.lef`
+for P&R, and `layout/gds/CF_ROM_SYNC.gds` / `layout/mag/CF_ROM_SYNC.mag` for the
+public wrap. `CF_ROM_SYNC_core` is the ROM leaf (empty Verilog, pin-only
+abstract). ChipFoundry substitutes vault GDS into `CF_ROM_SYNC_core` at tapeout.
+P&R uses the wrap LEF (`vpwr` / `vgnd` for chip PDN). Liberty in `timing/lib/`
+is rewritten onto the wrap cell.
 
 ## Features
 
-- Synchronous ROM hard macro (catalog family: 4K / 8K / 32K)
-- Public blackbox Verilog stub for connecting the macro in top-level RTL
-- Verilog behavioral model for functional verification (not transistor-level)
-- Abstract LEF and GDS (boundary, pins, keepouts) for place-and-route
-- Liberty timing models when the vendor drop includes them
-- README is the customer datasheet; a PDF is not required
+- Synchronous 1K×8 ROM (`A[9:0]`, `DO[7:0]`)
+- Clock `CLK`, enable `EN`, reset `RST`, output enable `OE`
+- Customer cell `CF_ROM_SYNC` 160.18 × 90.42 µm (15 µm halo around leaf 130.18 × 60.42 µm)
+- Chip PDN is `vpwr` / `vgnd`
 
-## Block Diagram
+## Pinout
 
-A block diagram is not generated from geometry. Optional figures may be placed under
-`doc/` when they are cleared for customers.
+Customer documentation includes a pinout of the integration cell only.
+Internal schematics and architecture block diagrams are not published.
+
+![CF_ROM_SYNC pinout](doc/generated/CF_ROM_SYNC_pinout.svg)
+
+Pin names and directions match the public wrap (`layout/lef/CF_ROM_SYNC.lef`)
+and the blackbox stub (`hdl/gl/CF_ROM_SYNC.v`).
 
 ## Pin Description
 
-Pin names and directions come from the blackbox Verilog stub in `hdl/gl/`. That file
-is a port list only (empty module body) so synthesis and connectivity checking can
-instantiate the macro. It is not a functional model.
+Directions and widths are taken from the shipped Verilog in `hdl/gl/CF_ROM_SYNC.v`.
 
-## Specifications
+| Name | Direction | Width | Description |
+|---|---|---:|---|
+| `DO` | output | 8 | Synchronous read data. |
+| `A` | input | 10 | Address. |
+| `EN` | input | 1 | Macro enable. |
+| `CLK` | input | 1 | Synchronous clock. |
+| `RST` | input | 1 | Reset. |
+| `OE` | input | 1 | Output enable. |
+| `vpwr` | input | 1 | Core supply. |
+| `vgnd` | input | 1 | Ground. |
 
-Electrical and timing numbers belong in this README and in vendor Liberty. This
-repository does not invent PVT tables. Functional simulation uses the behavioral
-Verilog model. Spice is not provided.
+`CF_ROM_SYNC_core` also has well taps `vpb` / `vnb`. The wrap ties
+`.vpb(vpwr)` and `.vnb(vgnd)`. Do not connect those pins at chip level.
 
-## Timing Diagram
+In OpenLane / LibreLane, hook chip PDN with
+`PDN_MACRO_CONNECTIONS: "u_cf_rom_sync vccd1 vssd1 vpwr vgnd"` and connect
+`.vpwr(vccd1)`, `.vgnd(vssd1)` under `USE_POWER_PINS`. Do not list `vpb` /
+`vnb` on the wrapper instance.
 
-Timing diagrams are not synthesized from stubs. Clock, reset, and enable polarity
-must match the behavioral model and Liberty when those files are present in a
-release.
+## Limitations and Open Issues
 
-## Tapeout History
-
-Not silicon-proven in this ChipFoundry package version until a shuttle returns.
-Foundry merge uses vault GDS, never the public abstract.
+- Verilog in `hdl/gl/CF_ROM_SYNC.v` is a structural wrap around an empty
+  `CF_ROM_SYNC_core` blackbox. The programmed ROM image is in vault GDS,
+  not in this public package.
+- Liberty lists wrap-cell timing with well taps still present on the leaf
+  model. P&R uses the wrap LEF (`vpwr` / `vgnd` only).
+- This drop is the 1K×8 macro. Larger catalog densities are not in this
+  package.
