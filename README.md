@@ -22,14 +22,7 @@ tied inside the wrap.
 
 ```bash
 pip install cf-ipm
-ipm install CF_ROM_SYNC --version 0.2.2 --include-drafts
-```
-
-Until the marketplace listing is published, install from a local catalog
-override:
-
-```bash
-ipm install CF_ROM_SYNC --version 0.2.2 --include-drafts --local-file ip/catalog.json
+ipm install CF_ROM_SYNC --version 0.2.2
 ```
 
 Use `hdl/gl/CF_ROM_SYNC.v` as the customer blackbox, `layout/lef/CF_ROM_SYNC.lef`
