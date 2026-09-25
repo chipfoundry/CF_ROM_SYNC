@@ -2,7 +2,7 @@
 
 > Synchronous ROM
 
-Draft for designer review. The public GDS is an abstract; ChipFoundry
+The public GDS is an abstract; ChipFoundry
 substitutes protected full geometry at tapeout.
 
 This package ships an SRAM-style PG wrap `CF_ROM_SYNC` around leaf
