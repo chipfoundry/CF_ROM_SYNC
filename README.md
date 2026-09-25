@@ -22,14 +22,14 @@ tied inside the wrap.
 
 ```bash
 pip install cf-ipm
-ipm install CF_ROM_SYNC --version 0.2.1 --include-drafts
+ipm install CF_ROM_SYNC --version 0.2.2 --include-drafts
 ```
 
 Until the marketplace listing is published, install from a local catalog
 override:
 
 ```bash
-ipm install CF_ROM_SYNC --version 0.2.1 --include-drafts --local-file ip/catalog.json
+ipm install CF_ROM_SYNC --version 0.2.2 --include-drafts --local-file ip/catalog.json
 ```
 
 Use `hdl/gl/CF_ROM_SYNC.v` as the customer blackbox, `layout/lef/CF_ROM_SYNC.lef`
@@ -82,8 +82,9 @@ In OpenLane / LibreLane, hook chip PDN with
 ## Limitations and Open Issues
 
 - Verilog in `hdl/gl/CF_ROM_SYNC.v` is a structural wrap around an empty
-  `CF_ROM_SYNC_core` blackbox. The programmed ROM image is in vault GDS,
-  not in this public package.
+  `CF_ROM_SYNC_core` blackbox. Use `verify/beh_model/CF_ROM_SYNC_core.v` for
+  ideal functional simulation, not the empty GL stub. That model is a zero
+  image. The programmed ROM image is not in this public package.
 - Liberty lists wrap-cell timing with well taps still present on the leaf
   model. P&R uses the wrap LEF (`vpwr` / `vgnd` only).
 - This drop is the 1K×8 macro. Larger catalog densities are not in this
