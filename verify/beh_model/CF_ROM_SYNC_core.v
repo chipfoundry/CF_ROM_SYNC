@@ -8,7 +8,8 @@
 //   * RST high on posedge CLK clears the output register
 //   * EN high on posedge CLK captures mem[A]
 //   * OE high drives DO; OE low is high-Z
-//   * The public image is all zeros. The programmed image is not in this package.
+//   * The public image is all zeros. Program a mask image with
+//     scripts/program_cf_rom_sync.py (doc/PROGRAMMING.md).
 // Wells are unused in this digital model.
 
 module CF_ROM_SYNC_core (

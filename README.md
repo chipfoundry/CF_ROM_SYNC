@@ -72,12 +72,29 @@ In OpenLane / LibreLane, hook chip PDN with
 `.vpwr(vccd1)`, `.vgnd(vssd1)` under `USE_POWER_PINS`. Do not list `vpb` /
 `vnb` on the wrapper instance.
 
+## Programming
+
+The shipped simulation model is an all-zero image. To simulate your mask
+image and emit the LVS netlist, see [doc/PROGRAMMING.md](doc/PROGRAMMING.md).
+
+```bash
+python3 scripts/program_cf_rom_sync.py image.hex \
+  --sim build/CF_ROM_SYNC_sim.v \
+  --lvs build/CF_ROM_SYNC_lvs.v \
+  --image-out build/CF_ROM_SYNC.rom
+```
+
+Submit `CF_ROM_SYNC.rom` with the design. Place and route still uses
+`hdl/gl/CF_ROM_SYNC.v`. Do not add the simulation file to OpenLane
+`VERILOG_FILES`.
+
 ## Limitations and Open Issues
 
 - Verilog in `hdl/gl/CF_ROM_SYNC.v` is a structural wrap around an empty
   `CF_ROM_SYNC_core` blackbox. Use `verify/beh_model/CF_ROM_SYNC_core.v` for
   ideal functional simulation, not the empty GL stub. That model is a zero
-  image. The programmed ROM image is not in this public package.
+  image. Build a programmed simulation model with
+  `scripts/program_cf_rom_sync.py` ([doc/PROGRAMMING.md](doc/PROGRAMMING.md)).
 - Liberty lists wrap-cell timing with well taps still present on the leaf
   model. P&R uses the wrap LEF (`vpwr` / `vgnd` only).
 - This drop is the 1K×8 macro. Larger catalog densities are not in this
