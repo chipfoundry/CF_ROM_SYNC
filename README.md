@@ -22,7 +22,7 @@ tied inside the wrap.
 
 ```bash
 pip install cf-ipm
-ipm install CF_ROM_SYNC --version 0.2.2
+ipm install CF_ROM_SYNC --version 0.2.3
 ```
 
 Use `hdl/gl/CF_ROM_SYNC.v` as the customer blackbox, `layout/lef/CF_ROM_SYNC.lef`
@@ -74,8 +74,10 @@ In OpenLane / LibreLane, hook chip PDN with
 
 ## Programming
 
-The shipped simulation model is an all-zero image. To simulate your mask
-image and emit the LVS netlist, see [doc/PROGRAMMING.md](doc/PROGRAMMING.md).
+The shipped simulation model is an all-zero image. Build a programmed
+simulation model, and the wrap netlist used for integration LVS, with
+[doc/PROGRAMMING.md](doc/PROGRAMMING.md). The LVS netlist does not contain
+the image.
 
 ```bash
 python3 scripts/program_cf_rom_sync.py image.hex \

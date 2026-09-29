@@ -5,8 +5,10 @@
 files in `hdl/gl/` and `verify/beh_model/` do not contain your image.
 `verify/beh_model/CF_ROM_SYNC_core.v` reads as all zeros.
 
-`scripts/program_cf_rom_sync.py` turns your image into a simulation model
-and an LVS netlist.
+`scripts/program_cf_rom_sync.py` checks that image and writes a simulation
+model plus the wrap netlist used for integration LVS. It does not edit the
+public GDS. The public layout is an abstract, so the image is not drawn
+into it.
 
 ## Image file
 
@@ -37,8 +39,8 @@ python3 scripts/program_cf_rom_sync.py image.hex \
 The script prints the SHA-256 of the 1024 bytes. The same digest is
 written at the top of both Verilog files. `CF_ROM_SYNC.rom` is the
 normalized image: one lowercase byte per line, address 0 first. Submit
-that file with the design. ChipFoundry applies it when the leaf geometry
-is merged.
+that file and the SHA-256 with the design. ChipFoundry programs the
+protected leaf from that image when the full geometry is merged.
 
 ## Simulation
 
@@ -60,7 +62,7 @@ route with `hdl/gl/CF_ROM_SYNC.v` and `layout/lef/CF_ROM_SYNC.lef`.
 `CF_ROM_SYNC` ties the leaf wells (`vpb` to `vpwr`, `vnb` to `vgnd`).
 `CF_ROM_SYNC_core` is an empty blackbox.
 
-The public GDS and LEF are abstracts. They do not contain the programmed
-bits, so those bits are not part of the LVS netlist. Check LVS against
-`layout/gds/CF_ROM_SYNC.gds` with either `hdl/gl/` or the generated LVS
-file. Both describe the same wrap.
+The public GDS and LEF are abstracts. LVS compares the wrap hierarchy and
+pins. It does not check the programmed bytes. Use either `hdl/gl/` or the
+generated LVS file against `layout/gds/CF_ROM_SYNC.gds`. Both describe the
+same wrap.
