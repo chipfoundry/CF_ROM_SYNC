@@ -12,7 +12,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 133.68 14.95 133.875 15.38 ;
+        RECT 133.68 0 133.875 15.38 ;
     END
   END DO[0]
   PIN DO[1]
@@ -20,7 +20,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 132.715 14.95 132.91 15.38 ;
+        RECT 132.715 0 132.91 15.38 ;
     END
   END DO[1]
   PIN DO[2]
@@ -28,7 +28,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 111.73 14.95 111.925 15.38 ;
+        RECT 111.73 0 111.925 15.38 ;
     END
   END DO[2]
   PIN DO[3]
@@ -36,7 +36,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 110.765 14.95 110.96 15.38 ;
+        RECT 110.765 0 110.96 15.38 ;
     END
   END DO[3]
   PIN DO[4]
@@ -44,7 +44,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 89.78 14.95 89.975 15.38 ;
+        RECT 89.78 0 89.975 15.38 ;
     END
   END DO[4]
   PIN DO[6]
@@ -52,7 +52,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 67.83 14.95 68.025 15.38 ;
+        RECT 67.83 0 68.025 15.38 ;
     END
   END DO[6]
   PIN A[2]
@@ -60,7 +60,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.01 25.73 15.4 26.215 ;
+        RECT 0 25.73 15.4 26.215 ;
     END
   END A[2]
   PIN A[1]
@@ -68,7 +68,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.01 27.13 15.4 27.615 ;
+        RECT 0 27.13 15.4 27.615 ;
     END
   END A[1]
   PIN A[0]
@@ -76,7 +76,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.015 16.285 15.405 16.77 ;
+        RECT 0 16.285 15.405 16.77 ;
     END
   END A[0]
   PIN A[3]
@@ -84,7 +84,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.02 20.125 15.41 20.61 ;
+        RECT 0 20.125 15.41 20.61 ;
     END
   END A[3]
   PIN A[9]
@@ -92,7 +92,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.01 48.79 15.4 49.275 ;
+        RECT 0 48.79 15.4 49.275 ;
     END
   END A[9]
   PIN A[8]
@@ -100,7 +100,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.01 47.39 15.4 47.875 ;
+        RECT 0 47.39 15.4 47.875 ;
     END
   END A[8]
   PIN DO[5]
@@ -108,7 +108,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 88.815 14.95 89.01 15.38 ;
+        RECT 88.815 0 89.01 15.38 ;
     END
   END DO[5]
   PIN vpwr
@@ -184,7 +184,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 66.865 14.95 67.06 15.38 ;
+        RECT 66.865 0 67.06 15.38 ;
     END
   END DO[7]
   PIN A[5]
@@ -192,7 +192,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.01 72.7 15.4 73.185 ;
+        RECT 0 72.7 15.4 73.185 ;
     END
   END A[5]
   PIN A[4]
@@ -200,7 +200,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.01 71.31 15.4 71.795 ;
+        RECT 0 71.31 15.4 71.795 ;
     END
   END A[4]
   PIN A[6]
@@ -208,7 +208,7 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.01 51.03 15.4 51.515 ;
+        RECT 0 51.03 15.4 51.515 ;
     END
   END A[6]
   PIN A[7]
@@ -216,46 +216,64 @@ MACRO CF_ROM_SYNC
     USE SIGNAL ;
     PORT
       LAYER met2 ;
-        RECT 15.01 49.63 15.4 50.115 ;
+        RECT 0 49.63 15.4 50.115 ;
     END
   END A[7]
   OBS
     LAYER li1 ;
       RECT 0 0 160.18 90.42 ;
     LAYER met1 ;
-      RECT 0 0 15 90.42 ;
-      RECT 145.18 0 160.18 90.42 ;
-      RECT 15 0 31.4 15 ;
-      RECT 31.595 0 46.085 15 ;
-      RECT 46.28 0 52.535 15 ;
-      RECT 52.73 0 55.23 15 ;
-      RECT 55.425 0 66.865 15 ;
-      RECT 66.865 0 67.06 14.95 ;
-      RECT 67.06 0 67.83 15 ;
-      RECT 67.83 0 68.025 14.95 ;
-      RECT 68.025 0 88.815 15 ;
-      RECT 88.815 0 89.01 14.95 ;
-      RECT 89.01 0 89.78 15 ;
-      RECT 89.78 0 89.975 14.95 ;
-      RECT 89.975 0 110.765 15 ;
-      RECT 110.765 0 110.96 14.95 ;
-      RECT 110.96 0 111.73 15 ;
-      RECT 111.73 0 111.925 14.95 ;
-      RECT 111.925 0 132.715 15 ;
-      RECT 132.715 0 132.91 14.95 ;
-      RECT 132.91 0 133.68 15 ;
-      RECT 133.68 0 133.875 14.95 ;
-      RECT 133.875 0 145.18 15 ;
-      RECT 15 75.42 145.18 90.42 ;
+      RECT 0 0 31.4 15.225 ;
+      RECT 31.595 0 46.085 15.225 ;
+      RECT 46.28 0 52.535 15.225 ;
+      RECT 52.73 0 55.23 15.225 ;
+      RECT 55.425 0 66.865 15.225 ;
+      RECT 67.06 0 67.83 15.38 ;
+      RECT 68.025 0 88.815 15.38 ;
+      RECT 89.01 0 89.78 15.38 ;
+      RECT 89.975 0 110.765 15.38 ;
+      RECT 110.96 0 111.73 15.38 ;
+      RECT 111.925 0 132.715 15.38 ;
+      RECT 132.91 0 133.68 15.38 ;
+      RECT 133.875 0 160.18 15.38 ;
+      RECT 0 15.225 66.865 15.38 ;
+      RECT 0 15.38 160.18 90.42 ;
     LAYER met2 ;
-      RECT 0 0 15 90.42 ;
-      RECT 145.18 0 160.18 90.42 ;
-      RECT 15 0 139.185 15 ;
-      RECT 139.185 0 143.01 13.24 ;
-      RECT 143.01 0 145.18 15 ;
-      RECT 15 75.42 141.89 90.42 ;
-      RECT 141.89 79.02 142.37 90.42 ;
-      RECT 142.37 75.42 145.18 90.42 ;
+      RECT 0 0 160.18 13.24 ;
+      RECT 0 13.24 139.185 16.285 ;
+      RECT 143.01 13.24 160.18 16.725 ;
+      RECT 15.405 16.285 139.185 16.725 ;
+      RECT 15.405 16.725 160.18 16.77 ;
+      RECT 0 16.77 160.18 20.125 ;
+      RECT 15.41 20.125 160.18 20.61 ;
+      RECT 0 20.61 160.18 25.73 ;
+      RECT 15.4 25.73 160.18 26.215 ;
+      RECT 0 26.215 160.18 27.13 ;
+      RECT 15.4 27.13 160.18 27.615 ;
+      RECT 0 27.615 160.18 47.39 ;
+      RECT 15.4 47.39 160.18 47.875 ;
+      RECT 0 47.875 160.18 48.79 ;
+      RECT 15.4 48.79 160.18 49.275 ;
+      RECT 0 49.275 160.18 49.63 ;
+      RECT 15.4 49.63 160.18 50.115 ;
+      RECT 0 50.115 160.18 51.03 ;
+      RECT 15.4 51.03 160.18 51.515 ;
+      RECT 0 51.515 160.18 71.31 ;
+      RECT 15.4 71.31 160.18 71.795 ;
+      RECT 0 71.795 160.18 72.7 ;
+      RECT 15.4 72.7 160.18 73.185 ;
+      RECT 0 73.185 160.18 73.82 ;
+      RECT 0 73.82 15.61 75.25 ;
+      RECT 20.3 73.82 160.18 73.965 ;
+      RECT 20.3 73.965 140.215 74 ;
+      RECT 144.04 73.965 160.18 75.28 ;
+      RECT 20.3 74 37.925 75.23 ;
+      RECT 43.26 74 140.215 75.23 ;
+      RECT 20.3 75.23 140.215 75.25 ;
+      RECT 0 75.25 140.215 75.28 ;
+      RECT 0 75.28 141.89 79.02 ;
+      RECT 142.37 75.28 160.18 79.02 ;
+      RECT 0 79.02 160.18 90.42 ;
   END
 END CF_ROM_SYNC
 
