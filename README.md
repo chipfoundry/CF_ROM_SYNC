@@ -22,7 +22,7 @@ tied inside the wrap.
 
 ```bash
 pip install cf-ipm
-ipm install CF_ROM_SYNC --version 0.2.4
+ipm install CF_ROM_SYNC --version 0.2.5
 ```
 
 Use `hdl/gl/CF_ROM_SYNC.v` as the customer blackbox, `layout/lef/CF_ROM_SYNC.lef`
@@ -30,6 +30,7 @@ for P&R, and `layout/gds/CF_ROM_SYNC.gds` / `layout/mag/CF_ROM_SYNC.mag` for the
 public wrap. `CF_ROM_SYNC_core` is the ROM leaf (empty Verilog, pin-only
 abstract). ChipFoundry substitutes vault GDS into `CF_ROM_SYNC_core` at tapeout.
 0.2.4 adds wafflefill in the leaf GDS so pre-merge density passes, and adds the met3 waffleDrop cover. WaffleDrop still keeps chip fill out of the block.
+0.2.5 brings `DO` and `A` out through the halo. The LEF port is the outer 6.9 µm of each stem; the rest of the stem is obstruction.
 P&R uses the wrap LEF (`vpwr` / `vgnd` for chip PDN). Liberty in `timing/lib/`
 is rewritten onto the wrap cell.
 
