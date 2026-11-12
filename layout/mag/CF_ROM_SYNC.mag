@@ -613,31 +613,31 @@ rect 16000 0 16620 18084
 rect 22000 0 22620 18084
 rect 28000 0 28620 18084
 << labels >>
-rlabel metal1 s 26736 0 26775 3076 4 DO[0]
+rlabel metal1 s 26736 0 26775 1380 4 DO[0]
 port 1 nsew
-rlabel metal1 s 26543 0 26582 3076 4 DO[1]
+rlabel metal1 s 26543 0 26582 1380 4 DO[1]
 port 2 nsew
-rlabel metal1 s 22346 0 22385 3076 4 DO[2]
+rlabel metal1 s 22346 0 22385 1380 4 DO[2]
 port 3 nsew
-rlabel metal1 s 22153 0 22192 3076 4 DO[3]
+rlabel metal1 s 22153 0 22192 1380 4 DO[3]
 port 4 nsew
-rlabel metal1 s 17956 0 17995 3076 4 DO[4]
+rlabel metal1 s 17956 0 17995 1380 4 DO[4]
 port 5 nsew
-rlabel metal1 s 13566 0 13605 3076 4 DO[6]
+rlabel metal1 s 13566 0 13605 1380 4 DO[6]
 port 6 nsew
-rlabel metal2 s 0 5146 3080 5243 4 A[2]
+rlabel metal2 s 0 5146 1380 5243 4 A[2]
 port 7 nsew
-rlabel metal2 s 0 5426 3080 5523 4 A[1]
+rlabel metal2 s 0 5426 1380 5523 4 A[1]
 port 8 nsew
-rlabel metal2 s 0 3257 3081 3354 4 A[0]
+rlabel metal2 s 0 3257 1380 3354 4 A[0]
 port 9 nsew
-rlabel metal2 s 0 4025 3082 4122 4 A[3]
+rlabel metal2 s 0 4025 1380 4122 4 A[3]
 port 10 nsew
-rlabel metal2 s 0 9758 3080 9855 4 A[9]
+rlabel metal2 s 0 9758 1380 9855 4 A[9]
 port 11 nsew
-rlabel metal2 s 0 9478 3080 9575 4 A[8]
+rlabel metal2 s 0 9478 1380 9575 4 A[8]
 port 12 nsew
-rlabel metal1 s 17763 0 17802 3076 4 DO[5]
+rlabel metal1 s 17763 0 17802 1380 4 DO[5]
 port 13 nsew
 rlabel metal3 s 25262 2648 28602 2744 4 vpwr
 port 14 nsew
@@ -667,23 +667,23 @@ rlabel metal4 s 22000 0 22620 18084 4 vgnd
 port 26 nsew
 rlabel metal4 s 28000 0 28620 18084 4 vgnd
 port 27 nsew
-rlabel metal1 s 6280 0 6319 3045 4 OE
+rlabel metal1 s 6280 0 6319 1380 4 OE
 port 28 nsew
-rlabel metal1 s 11046 0 11085 3045 4 EN
+rlabel metal1 s 11046 0 11085 1380 4 EN
 port 29 nsew
-rlabel metal1 s 10507 0 10546 3045 4 CLK
+rlabel metal1 s 10507 0 10546 1380 4 CLK
 port 30 nsew
-rlabel metal1 s 9217 0 9256 3045 4 RST
+rlabel metal1 s 9217 0 9256 1380 4 RST
 port 31 nsew
-rlabel metal1 s 13373 0 13412 3076 4 DO[7]
+rlabel metal1 s 13373 0 13412 1380 4 DO[7]
 port 32 nsew
-rlabel metal2 s 0 14540 3080 14637 4 A[5]
+rlabel metal2 s 0 14540 1380 14637 4 A[5]
 port 33 nsew
-rlabel metal2 s 0 14262 3080 14359 4 A[4]
+rlabel metal2 s 0 14262 1380 14359 4 A[4]
 port 34 nsew
-rlabel metal2 s 0 10206 3080 10303 4 A[6]
+rlabel metal2 s 0 10206 1380 10303 4 A[6]
 port 35 nsew
-rlabel metal2 s 0 9926 3080 10023 4 A[7]
+rlabel metal2 s 0 9926 1380 10023 4 A[7]
 port 36 nsew
 << properties >>
 string FIXED_BBOX 0 0 32036 18084
